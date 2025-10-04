@@ -1,0 +1,59 @@
+html {
+  --button-bg: hsl(240deg 100% 50%);
+  --button-bg-hover: hsl(240deg 100% 40%);
+  --button-border: hsl(240deg 100% 30%);
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  color: white;
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+}
+
+.add-stars {
+  background-color: var(--button-bg);
+  padding: 1rem 1.5rem;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  border-bottom: 3px solid var(--button-border);
+  z-index: 1;
+
+  &:active {
+    border-bottom-width: 1px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.star {
+  position: absolute;
+  animation: fadeIn 1000ms ease-in forwards;
+  pointer-events: none;
+  user-select: none;
+}
