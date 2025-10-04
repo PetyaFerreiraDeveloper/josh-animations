@@ -34,6 +34,6 @@ button.addEventListener("click", function () {
   // Remove particles after animation duration
   window.setTimeout(() => {
     particles.forEach(particle => particle.remove())
-  }, FADE_OUT_DURATION)
+  }, FADE_OUT_DURATION + 200)
 
 });
