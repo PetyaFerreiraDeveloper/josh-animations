@@ -10,7 +10,6 @@ button.addEventListener("click", function () {
   const isLiked = button.classList.contains("liked");
 
   // Bail out early if the user is *undoing* their like.
-  // No particles in this case.
   if (!isLiked) return;
 
   // Create fadeout duration constant to control particle lifespan in one place
@@ -29,5 +28,12 @@ button.addEventListener("click", function () {
     particle.style.animationDuration = `${FADE_OUT_DURATION}ms`;
 
     button.appendChild(particle);
+    particles.push(particle);
   });
+
+  // Remove particles after animation duration
+  window.setTimeout(() => {
+    particles.forEach(particle => particle.remove())
+  }, FADE_OUT_DURATION)
+
 });
