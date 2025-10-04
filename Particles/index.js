@@ -13,6 +13,11 @@ button.addEventListener("click", function () {
   // No particles in this case.
   if (!isLiked) return;
 
+  // Create fadeout duration constant to control particle lifespan in one place
+  const FADE_OUT_DURATION = 1000; // in ms
+  
+  const particles = [];
+
   // Create multiple particles
   const numberOfParticles = 5;
   Array(numberOfParticles).fill().forEach((_, index) => {
@@ -21,6 +26,7 @@ button.addEventListener("click", function () {
 
     particle.style.top = randomPercent() + "%";
     particle.style.left = randomPercent() + "%";
+    particle.style.animationDuration = `${FADE_OUT_DURATION}ms`;
 
     button.appendChild(particle);
   });
