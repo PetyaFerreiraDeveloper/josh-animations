@@ -23,9 +23,11 @@ body {
   color: white;
   font-family: system-ui, sans-serif;
   font-size: 2rem;
+  z-index: 1;
 }
 
 .add-stars {
+  width: fit-content;
   background-color: var(--button-bg);
   padding: 1rem 1.5rem;
   color: white;
