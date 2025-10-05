@@ -1,0 +1,88 @@
+body {
+  background-color: brown;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  color: white;
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  z-index: 1;
+}
+
+.add-shimmer {
+  width: fit-content;
+  background: 
+    radial-gradient(
+      circle at 50% 0%,
+      oklch(0.5 0.15 165 / 0) 0% 60%,
+      oklch(0.5 0.15 165 / 0.125) 70%,
+      oklch(0.5 0.15 165 / 0.325) 80%,
+      oklch(0.5 0.15 165 / 0) 100%
+    ),
+    linear-gradient(
+      to top,
+      oklch(0.6 0.19 164 / 1),
+      oklch(0.9 0.2 182 / 1)
+    );
+  box-shadow:
+    inset 0px -1px 2px hsl(175deg 100% 20% / 0.5),
+    inset 0px -3px 6px hsl(175deg 100% 20% / 0.4),
+    inset 0px 5px 5px hsl(175deg 100% 90% / 0.75);
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 16px;
+  right: 16px;
+  height: 10px;
+  border-radius: 100px 100px 0 0;
+  border-top: 4px solid white;
+  filter: blur(4px);
+  opacity: 0.625;
+}
+
+@keyframes shimmerMove {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(200%);
+  }
+}
+
+.shimmer {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+  to right,
+  transparent,
+  hsl(180deg 100% 90%),
+  transparent
+  );
+  opacity: 0.5;
+  animation: shimmerMove forwards;
+}
