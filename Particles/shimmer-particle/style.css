@@ -50,25 +50,12 @@ body {
   overflow: hidden;
 }
 
-.add-shimmer::before {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 16px;
-  right: 16px;
-  height: 10px;
-  border-radius: 100px 100px 0 0;
-  border-top: 4px solid white;
-  filter: blur(4px);
-  opacity: 0.625;
-}
-
 @keyframes shimmerMove {
   from {
     transform: translateX(-100%);
   }
   to {
-    transform: translateX(200%);
+    transform: translateX(100%);
   }
 }
 
