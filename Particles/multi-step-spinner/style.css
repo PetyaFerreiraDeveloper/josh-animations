@@ -1,0 +1,34 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: aliceblue;
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  background-color: brown;
+  animation: fancySpin 2000ms infinite;
+}
+
+@keyframes fancySpin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(180deg) scale(1);
+    background-color: darkred;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.5);
+    background-color: red;
+  }
+  75% {
+    transform: rotate(0deg) scale(1.5);
+    background-color: darkred;
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
