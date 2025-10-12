@@ -1,0 +1,19 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: aliceblue;
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  background-color: brown;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
