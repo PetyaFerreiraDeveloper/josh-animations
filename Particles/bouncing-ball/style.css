@@ -1,0 +1,23 @@
+body {
+  background-color: aliceblue;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.ball {
+  width: 10rem;
+  height: 10rem;
+  background-color: coral;
+  border-radius: 50%;
+  animation: bounce 500ms infinite alternate ease-out;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5rem);
+  }
+}
