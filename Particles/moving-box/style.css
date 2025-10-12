@@ -1,0 +1,21 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.box {
+  width: 10rem;
+  height: 10rem;
+  background: coral;
+  animation: move 1s forwards;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
