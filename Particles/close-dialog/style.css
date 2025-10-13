@@ -1,0 +1,59 @@
+.dialog-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  background:
+    hsl(210deg, 30%, 12%);
+}
+
+.dialog-content {
+  width: 300px;
+  max-width: 100vw;
+  height: 200px;
+  background: white;
+  border-radius: 6px;
+  position: relative;
+}
+
+.close-btn {
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-100%);
+  /* transform: translateY(calc(-100% + -1rem)); */
+}
+
+.close-btn:hover {
+  background: hsl(0deg 0% 100% / 0.125);
+}
+
+.close-btn svg {
+  display: block;
+
+}
+
+/*
+  For more information on what this is
+  and how it works, see:
+  joshwcomeau.com/snippets/react-components/visually-hidden/
+*/
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
